@@ -1,0 +1,66 @@
+/*
+Colours from
+https://www.reddit.com/r/discordapp/comments/nczn1g/i_made_a_color_palette_to_match_the_new_discord/
+*/
+:root{
+    --not-quite-black: #23272a;
+    --quite-black: #121416;
+    --dark-grey: #2f3136;
+    --white: #ffffff;
+    --actually-black: #000000;
+    --not-so-blurple: #5866ef;
+    --nitro-grey: #4f5d7e;
+    --online-green: #3da560;
+    --hyperlink-blue: #09b0f2;
+    --dnd-red: #ec4145;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--quite-black);
+    color: var(--white);
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.calc{
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 20px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: var(--not-quite-black)
+}
+input,div{
+    grid-column: 1/-1;
+}
+.calc > button,input{
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--white);
+    background: var(--dark-grey);
+    border: none;
+}
+.calc > button:hover{
+    opacity: 0.5;
+}
+.calc > *.op{
+    background: var(--online-green)
+}
+.calc > *.ac{
+    background: var(--dnd-red)
+}
+.calc > *.eq{
+    background: var(--not-so-blurple);
+}
+.calc > *.m{
+    background: var(--nitro-grey);
+}
